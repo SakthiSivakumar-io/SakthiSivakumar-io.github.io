@@ -14,7 +14,7 @@ export default function ResumePage() {
         </p>
 
         <a
-          href="/Portfolio/Sakthi_Sivakumar_Resume.pdf"
+          href="/Sakthi_Sivakumar_Resume.pdf"
           download
           className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold
                      transition-all duration-300 hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-lg"

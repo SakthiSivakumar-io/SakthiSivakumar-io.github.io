@@ -3,209 +3,225 @@ import PageWrapper from "../components/PageWrapper";
 export default function ProjectsPage() {
   return (
     <PageWrapper>
-      <div className="max-w-6xl mx-auto px-6 py-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-12">
-          Projects & Case Studies
-        </h1>
+      <div className="max-w-6xl mx-auto px-6 py-20">
 
-        <div className="space-y-14">
+        {/* Header */}
+        <div className="mb-14">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Projects & Case Studies
+          </h1>
+          <div className="w-24 h-1 bg-blue-600"></div>
+        </div>
 
-          {/* PROJECT 1 */}
-          <div className="border rounded-xl p-8 shadow-sm bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-            <h2 className="text-2xl font-semibold mb-2">
-              Inventory Variance Analysis & Heat Treatment Control Study
+        <div className="space-y-20">
+
+          {/* ================= PROJECT 1 ================= */}
+          <div className="border border-gray-200 rounded-xl p-10 shadow-sm bg-white hover:shadow-md transition">
+
+            <h2 className="text-2xl font-bold mb-2">
+              Inventory Variance Control – Heat Treatment Stage
             </h2>
-
-            <p className="text-sm text-gray-500 mb-4">
-              Inventory Analyst / MIS & SAP MM · Manufacturing Environment
+            <p className="text-sm text-gray-500 mb-8">
+              Manufacturing Environment · SAP MM · Inventory Governance
             </p>
 
-            <h3 className="font-semibold mb-1">Objective</h3>
-            <p className="text-gray-600 mb-4">
-              To identify, quantify, and analyze inventory variance occurring
-              during the Heat Treatment (HT) stage and recommend control measures
-              to prevent inventory loss and audit risk.
-            </p>
+            <Section
+              title="Business Context"
+              content="Recurring stock mismatches were observed during physical verification, particularly at the Heat Treatment (HT) stage, impacting inventory accuracy and audit confidence."
+            />
 
-            <h3 className="font-semibold mb-1">Business Problem</h3>
-            <p className="text-gray-600 mb-4">
-              Despite SAP indicating sufficient stock, shortages were detected
-              during physical verification at the HT stage. The variance remained
-              undetected due to the absence of system receipt confirmation.
-            </p>
+            <Section
+              title="Core Problem"
+              content="SAP indicated sufficient stock, yet physical shortages existed. Removal of SAP 311 movement eliminated receipt-level accountability."
+            />
 
-            <h3 className="font-semibold mb-1">Root Cause Identified</h3>
-            <ul className="list-disc list-inside text-gray-600 mb-4">
-              <li>Removal of SAP 311 movement between In-House and HT</li>
-              <li>HT merged under same storage location as In-House</li>
-              <li>No receipt acknowledgment or weighing control at HT</li>
-              <li>Loss of system-level accountability</li>
-            </ul>
+            <Section
+              title="My Role"
+              content="Led variance investigation, analyzed SAP movement data, and developed a Power BI dashboard to isolate stage-wise discrepancies."
+            />
 
-            <h3 className="font-semibold mb-1">Analysis & Validation</h3>
-            <p className="text-gray-600 mb-4">
-              Power BI analysis confirmed that{" "}
-              <strong>100% of inventory variance</strong>
-              {" "}originated at the HT stage, with no variance observed in
-              In-House or Post-HT stages.
-            </p>
+            <Section
+              title="Key Findings"
+              list={[
+                "42 materials impacted",
+                "–1161 Qty variance identified",
+                "100% variance traced to HT stage",
+                "Root cause: removal of movement-based control"
+              ]}
+            />
 
-            <h3 className="font-semibold mb-1">Key Findings</h3>
-            <ul className="list-disc list-inside text-gray-600 mb-4">
-              <li>42 materials impacted</li>
-              <li>Total variance identified: <strong>–1161 Qty</strong></li>
-              <li>HT contribution to total variance: <strong>100%</strong></li>
-            </ul>
+            <Section
+              title="Business Impact"
+              list={[
+                "Restored system-level accountability",
+                "Prevented undetected inventory leakage",
+                "Strengthened audit readiness",
+                "Improved inventory governance discipline"
+              ]}
+              highlight
+            />
 
-            <h3 className="font-semibold mb-1">Tools Used</h3>
-            <div className="flex flex-wrap gap-2 mb-4">
-              {["SAP MM", "Power BI", "Excel", "Physical Stock Verification"].map(
-                (tool) => (
-                  <span
-                    key={tool}
-                    className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm"
-                  >
-                    {tool}
-                  </span>
-                )
-              )}
-            </div>
-
-            <h3 className="font-semibold mb-1">Outcome & Recommendations</h3>
-            <p className="text-gray-700 font-medium">
-              ✔ Identified system-driven control failure <br />
-              ✔ Prevented undetected inventory loss <br />
-              ✔ Recommended reinstating receipt control and HT weighing process <br />
-              ✔ Strengthened audit readiness and inventory governance
-            </p>
+            <Tools
+              tools={["SAP MM", "Power BI", "Excel", "Physical Stock Verification"]}
+            />
           </div>
 
-          {/* PROJECT 2 */}
-          <div className="border rounded-xl p-8 shadow-sm bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-            <h2 className="text-2xl font-semibold mb-2">
-              Weighing Scale Accuracy & Inventory Conversion Improvement Study
+
+          {/* ================= PROJECT 2 ================= */}
+          <div className="border border-gray-200 rounded-xl p-10 shadow-sm bg-white hover:shadow-md transition">
+
+            <h2 className="text-2xl font-bold mb-2">
+              Weighing Scale Accuracy & Inventory Conversion Optimization
             </h2>
-
-            <p className="text-sm text-gray-500 mb-4">
-              MIS / Inventory Analyst · Metrological & Process Study
+            <p className="text-sm text-gray-500 mb-8">
+              Process Study · Inventory Accuracy · Metrological Analysis
             </p>
 
-            <h3 className="font-semibold mb-1">Objective</h3>
-            <p className="text-gray-600 mb-4">
-              To scientifically analyze and control inventory variation occurring
-              during weight-to-piece conversion of components using an industrial
-              weighing scale.
-            </p>
+            <Section
+              title="Business Context"
+              content="Minor but recurring stock discrepancies were observed during weight-to-piece conversion of lightweight components."
+            />
 
-            <h3 className="font-semibold mb-1">Problem Statement</h3>
-            <p className="text-gray-600 mb-4">
-              Minor inventory discrepancies (1–4 pcs per lot) were observed
-              despite defined SOPs and periodic scale calibration, especially for
-              lightweight components.
-            </p>
+            <Section
+              title="Core Problem"
+              content="Despite calibration compliance, scale resolution below 2kg load caused systematic rounding errors and quantity mismatches."
+            />
 
-            <h3 className="font-semibold mb-1">Experimental Study & Observation</h3>
-            <p className="text-gray-600 mb-4">
-              Experimental trials showed that weighing scale resolution and
-              linearity improve only when the applied load exceeds approximately
-              <strong> 2 kg</strong>. Below this range, average piece weight varied
-              with sample size, leading to cumulative rounding errors.
-            </p>
+            <Section
+              title="My Role"
+              content="Conducted controlled experimental trials, analyzed sampling logic, and validated metrological behavior across weight ranges."
+            />
 
-            <h3 className="font-semibold mb-1">Evidence-Based Root Cause</h3>
-            <p className="text-gray-600 mb-4">
-              The issue was identified as{" "}
-              <strong>systemic and metrological</strong>, not due to operator
-              error or process non-compliance.
-            </p>
+            <Section
+              title="Key Findings"
+              list={[
+                "Scale accuracy stabilizes above 2kg load",
+                "Below threshold → rounding variation increases",
+                "Discrepancies were systemic, not operator-driven"
+              ]}
+            />
 
-            <h3 className="font-semibold mb-1">Corrective & Preventive Actions</h3>
-            <ul className="list-disc list-inside text-gray-600 mb-4">
-              <li>Revised sampling logic based on minimum ≥ 2 kg applied load</li>
-              <li>Defined tolerance limits (±0.2%) for inventory variation</li>
-              <li>Introduced operational validation using actual components</li>
-              <li>Established reference average weight above stable load range</li>
-            </ul>
+            <Section
+              title="Business Impact"
+              list={[
+                "Reduced inventory conversion variance",
+                "Scientifically justified audit discrepancies",
+                "Improved operational accuracy",
+                "Lowered reconciliation effort"
+              ]}
+              highlight
+            />
 
-            <h3 className="font-semibold mb-1">Tools Used</h3>
-            <div className="flex flex-wrap gap-2 mb-4">
-              {["Excel", "Statistical Analysis", "Process Validation"].map(
-                (tool) => (
-                  <span
-                    key={tool}
-                    className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm"
-                  >
-                    {tool}
-                  </span>
-                )
-              )}
-            </div>
-
-            <h3 className="font-semibold mb-1">Results & Business Impact</h3>
-            <p className="text-gray-700 font-medium">
-              ✔ Reduced inventory variation <br />
-              ✔ Scientifically justified discrepancies during audits <br />
-              ✔ Reduced rechecking and reconciliation effort <br />
-              ✔ Improved inventory credibility and control
-            </p>
+            <Tools
+              tools={["Excel", "Statistical Analysis", "Process Validation"]}
+            />
           </div>
-{/* PROJECT 3 */}
-<div className="border rounded-xl p-8 shadow-sm bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-  <h2 className="text-2xl font-semibold mb-2">
-    SAP MM Inventory Flow Analysis (GRN → Consumption → Reconciliation)
-  </h2>
 
-  <p className="text-sm text-gray-500 mb-4">
-    Inventory Analyst · SAP MM & MIS · Manufacturing Environment
-  </p>
 
-  <h3 className="font-semibold mb-1">Objective</h3>
-  <p className="text-gray-600 mb-4">
-    To analyze the end-to-end SAP MM inventory flow from Goods Receipt (GRN)
-    to production consumption and reconciliation, identifying stock variances
-    impacting inventory accuracy, financial reporting, and audit compliance.
-  </p>
+          {/* ================= PROJECT 3 ================= */}
+          <div className="border border-gray-200 rounded-xl p-10 shadow-sm bg-white hover:shadow-md transition">
 
-  <h3 className="font-semibold mb-1">Approach</h3>
-  <p className="text-gray-600 mb-4">
-    Modeled SAP MM inventory data to track GRN postings, production consumption,
-    and physical stock verification. A Power BI MIS dashboard was developed to
-    visualize quantity and value-based variances.
-  </p>
+            <h2 className="text-2xl font-bold mb-2">
+              SAP MM Inventory Flow Analysis (GRN → Consumption → Reconciliation)
+            </h2>
+            <p className="text-sm text-gray-500 mb-8">
+              SAP MM · Inventory Flow Visibility · Financial Impact Analysis
+            </p>
 
-  <h3 className="font-semibold mb-1">Key Analysis</h3>
-  <ul className="list-disc list-inside text-gray-600 mb-4">
-    <li>Compared GRN and consumption trends over time</li>
-    <li>Identified material-level stock discrepancies</li>
-    <li>Evaluated financial impact of inventory variances</li>
-    <li>Applied plant and storage-location filters for control analysis</li>
-  </ul>
+            <Section
+              title="Business Context"
+              content="Limited visibility existed between Goods Receipt (GRN), production consumption, and reconciliation processes."
+            />
 
-  <h3 className="font-semibold mb-1">Outcome & Impact</h3>
-  <ul className="list-disc list-inside text-gray-700 mb-4">
-    <li>Improved visibility into SAP MM inventory movement</li>
-    <li>Enabled quicker identification of discrepancy-prone materials</li>
-    <li>Supported audit reconciliation and corrective actions</li>
-    <li>Strengthened inventory control and reporting reliability</li>
-  </ul>
+            <Section
+              title="Core Problem"
+              content="Material-level discrepancies impacted inventory accuracy, financial reporting, and audit reconciliation timelines."
+            />
 
-  <h3 className="font-semibold mb-1">Tools Used</h3>
-  <div className="flex flex-wrap gap-2">
-    {["SAP MM", "Power BI", "Advanced Excel", "MIS Reporting"].map(
-      (tool) => (
-        <span
-          key={tool}
-          className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm"
-        >
-          {tool}
-        </span>
-      )
-    )}
-  </div>
-</div>
+            <Section
+              title="My Role"
+              content="Modeled SAP MM transactional data and developed a Power BI MIS dashboard to track movement trends and variance patterns."
+            />
+
+            <Section
+              title="Key Findings"
+              list={[
+                "GRN vs consumption trend gaps identified",
+                "Material-level discrepancy mapping",
+                "Quantity & value-based variance visibility",
+                "Plant and storage-location filtering logic applied"
+              ]}
+            />
+
+            <Section
+              title="Business Impact"
+              list={[
+                "Improved inventory movement visibility",
+                "Enabled faster discrepancy detection",
+                "Supported structured audit reconciliation",
+                "Strengthened reporting reliability"
+              ]}
+              highlight
+            />
+
+            <Tools
+              tools={["SAP MM", "Power BI", "Advanced Excel", "MIS Reporting"]}
+            />
+          </div>
 
         </div>
       </div>
     </PageWrapper>
+  );
+}
+
+
+/* ================= Reusable Components ================= */
+
+function Section({
+  title,
+  content,
+  list,
+  highlight
+}: {
+  title: string;
+  content?: string;
+  list?: string[];
+  highlight?: boolean;
+}) {
+  return (
+    <div className="mb-6">
+      <h3 className="font-semibold text-gray-900 mb-2">{title}</h3>
+
+      {content && (
+        <p className="text-gray-600">{content}</p>
+      )}
+
+      {list && (
+        <ul className={`list-disc list-inside space-y-1 ${highlight ? "text-gray-800 font-medium" : "text-gray-600"}`}>
+          {list.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+function Tools({ tools }: { tools: string[] }) {
+  return (
+    <div className="mt-4">
+      <h3 className="font-semibold text-gray-900 mb-2">Tools Used</h3>
+      <div className="flex flex-wrap gap-2">
+        {tools.map((tool) => (
+          <span
+            key={tool}
+            className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm"
+          >
+            {tool}
+          </span>
+        ))}
+      </div>
+    </div>
   );
 }

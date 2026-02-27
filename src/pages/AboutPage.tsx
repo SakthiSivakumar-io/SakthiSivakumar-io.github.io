@@ -3,74 +3,98 @@ import PageWrapper from "../components/PageWrapper";
 export default function AboutPage() {
   return (
     <PageWrapper>
-      <div className="max-w-5xl mx-auto px-6 py-20">
+      <div className="max-w-6xl mx-auto px-6 py-24">
 
-        {/* Header */}
-        <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        {/* Header Section */}
+        <div className="mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             About Me
           </h1>
-          <div className="w-20 h-1 bg-blue-600"></div>
+          <p className="text-xl text-gray-600 max-w-3xl">
+            Inventory Control Specialist focused on SAP-driven governance,
+            variance reduction, and data-backed operational decision-making.
+          </p>
+          <div className="w-24 h-1 bg-blue-600 mt-6"></div>
         </div>
 
-        {/* Professional Summary */}
-        <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
+        {/* KPI STRIP */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
+          {[
+            { value: "3.5+", label: "Years Experience" },
+            { value: "SAP MM", label: "Core System Expertise" },
+            { value: "Audit-Ready", label: "Control Orientation" },
+            { value: "Data-Driven", label: "Decision Approach" }
+          ].map((item) => (
+            <div
+              key={item.label}
+              className="bg-gray-50 border border-gray-200 rounded-lg p-6 text-center"
+            >
+              <p className="text-2xl font-bold text-gray-900">
+                {item.value}
+              </p>
+              <p className="text-sm text-gray-500 mt-1">
+                {item.label}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Professional Narrative */}
+        <div className="max-w-4xl space-y-8 text-lg text-gray-700 leading-relaxed mb-20">
           <p>
-            I am a <span className="font-semibold text-gray-900">results-driven Inventory Analyst</span> with 
-            over <span className="font-semibold text-gray-900">3.5+ years of experience</span> in 
-            manufacturing environments, specializing in 
-            <span className="font-semibold text-gray-900"> SAP MM, inventory reconciliation, internal audits, and MIS reporting</span>.
+            I am a <span className="font-semibold text-gray-900">results-oriented Inventory Analyst</span> with hands-on
+            experience in manufacturing environments where precision,
+            accountability, and system discipline are critical.
           </p>
 
           <p>
-            My expertise lies in ensuring <span className="font-semibold text-gray-900">inventory accuracy</span>, 
-            identifying <span className="font-semibold text-gray-900">stock variances</span>, 
-            strengthening internal controls, and supporting audit-ready documentation through 
-            structured reporting and data validation.
+            My work centers around <span className="font-semibold text-gray-900">inventory reconciliation,
+            SAP MM process control, and variance investigation</span> —
+            ensuring that system stock aligns with physical reality and that
+            discrepancies are analyzed at root-cause level.
           </p>
 
           <p>
-            I operate at the intersection of <span className="font-semibold text-gray-900">operations, systems, and data</span>, 
-            transforming raw transactional records into actionable insights that improve 
-            control, efficiency, and decision-making.
+            I operate at the intersection of <span className="font-semibold text-gray-900">operations,
+            financial impact, and system integrity</span>, transforming raw
+            transactional data into actionable insights that strengthen
+            governance and reduce risk exposure.
           </p>
 
           <p>
-            Currently, I am expanding my capabilities toward 
-            <span className="font-semibold text-gray-900"> analytics-driven roles</span>, 
-            combining my strong SAP foundation with advanced Excel, reporting automation, 
-            and data analysis skills to deliver business-focused solutions.
+            As I continue advancing toward analytics-driven roles, I am
+            integrating <span className="font-semibold text-gray-900">Advanced Excel,
+            reporting automation, and business intelligence tools</span> into
+            my workflow to deliver scalable, data-backed solutions.
           </p>
         </div>
 
-        {/* Capability Cards */}
-        <div className="mt-16 grid md:grid-cols-2 gap-8">
+        {/* Capability Sections */}
+        <div className="grid md:grid-cols-2 gap-10">
 
-          {/* Core Expertise */}
-          <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-md transition">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              Core Expertise
+          <div className="bg-white border border-gray-200 rounded-xl p-10 shadow-sm">
+            <h3 className="text-xl font-semibold text-gray-900 mb-6">
+              Core Capabilities
             </h3>
-            <ul className="space-y-3 text-gray-600">
-              <li>• Inventory Control & Stock Reconciliation</li>
-              <li>• SAP MM – P2P & GR/IR Process</li>
-              <li>• Physical vs System Stock Validation</li>
-              <li>• Inventory Variance & Root Cause Analysis</li>
-              <li>• Audit Documentation & Compliance Support</li>
+            <ul className="space-y-4 text-gray-600">
+              <li>Inventory Control & Stock Reconciliation</li>
+              <li>SAP MM – GRN, Consumption & Movement Analysis</li>
+              <li>Variance & Root Cause Investigation</li>
+              <li>Internal Audit Documentation & Compliance Support</li>
+              <li>Physical vs System Stock Validation</li>
             </ul>
           </div>
 
-          {/* Growth & Direction */}
-          <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-md transition">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              Growth & Direction
+          <div className="bg-white border border-gray-200 rounded-xl p-10 shadow-sm">
+            <h3 className="text-xl font-semibold text-gray-900 mb-6">
+              Strategic Growth Focus
             </h3>
-            <ul className="space-y-3 text-gray-600">
-              <li>• Advanced Excel & Reporting Automation</li>
-              <li>• Power BI Dashboard Development</li>
-              <li>• Business Data Analysis</li>
-              <li>• Process Optimization through Insights</li>
-              <li>• Control Strengthening & Risk Reduction</li>
+            <ul className="space-y-4 text-gray-600">
+              <li>Advanced Excel & Reporting Automation</li>
+              <li>Power BI Dashboard Development</li>
+              <li>Data-Driven Process Optimization</li>
+              <li>Inventory Governance Strengthening</li>
+              <li>Control-Based Risk Reduction</li>
             </ul>
           </div>
 

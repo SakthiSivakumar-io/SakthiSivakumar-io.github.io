@@ -16,6 +16,7 @@ export default function ProjectsPage() {
         <div className="space-y-20">
 
 {/* ================= FEATURED PROJECT ================= */}
+
 <div className="border-2 border-blue-500 rounded-xl p-10 shadow-md bg-white">
 
   <div className="flex items-center gap-3 mb-4">
@@ -34,12 +35,12 @@ export default function ProjectsPage() {
 
   <Section
     title="Business Context"
-    content="Retail inventory teams often struggle with stock visibility, replenishment planning, inventory risk identification, and executive decision-making."
+    content="Retail inventory teams often struggle with stock visibility, replenishment planning, inventory risk identification, stock availability monitoring, and executive decision-making. This project was designed to transform raw inventory data into actionable business intelligence."
   />
 
   <Section
     title="Project Objective"
-    content="Develop an end-to-end Inventory Intelligence Solution capable of monitoring inventory health, identifying risks, analyzing products, and providing executive-level business recommendations."
+    content="Develop an end-to-end Inventory Intelligence Solution capable of monitoring inventory health, identifying risks, analyzing products, supporting replenishment decisions, and delivering executive-level business recommendations."
   />
 
   <Section
@@ -55,10 +56,10 @@ export default function ProjectsPage() {
   <Section
     title="Key Insights Identified"
     list={[
-      "1670 Products Analyzed",
+      "1,670 Products Analyzed",
       "14 Categories Monitored",
       "453 Out-of-Stock Products Identified",
-      "546 Low Stock Products Monitored",
+      "546 Low-Stock Products Monitored",
       "₹7.20 Lakhs Inventory Risk Exposure",
       "87.86% Inventory Availability"
     ]}
@@ -67,25 +68,58 @@ export default function ProjectsPage() {
   <Section
     title="Business Impact"
     list={[
-      "Improved inventory visibility",
+      "Improved inventory visibility across all product categories",
       "Enabled proactive replenishment planning",
       "Reduced stock-out identification effort",
       "Provided executive-level decision support",
-      "Centralized inventory monitoring framework"
+      "Centralized inventory monitoring framework",
+      "Highlighted inventory risk exposure and critical products"
     ]}
     highlight
   />
 
-  <Tools
-    tools={[
-      "Power BI",
-      "DAX",
-      "Power Query",
-      "Excel",
-      "Inventory Analytics",
-      "Business Intelligence"
-    ]}
-  />
+  <div className="mt-8">
+    <h3 className="text-xl font-semibold mb-4">Project Links</h3>
+
+```
+<div className="flex flex-wrap gap-4">
+
+  <a
+    href="https://github.com/SakthiSivakumar-io/zepto-retail-inventory-intelligence-dashboard"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-5 py-2 bg-black text-white rounded-lg hover:opacity-90"
+  >
+    GitHub Repository
+  </a>
+
+  <a
+    href="https://github.com/SakthiSivakumar-io/zepto-retail-inventory-intelligence-dashboard/blob/main/reports/Zepto_Retail_Inventory_Intelligence_Report.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+  >
+    View Project Report
+  </a>
+
+</div>
+```
+
+  </div>
+
+<Tools
+tools={[
+"Power BI",
+"DAX",
+"Power Query",
+"Excel",
+"Inventory Analytics",
+"Business Intelligence",
+"Data Visualization",
+"Supply Chain Analytics"
+]}
+/>
+
 </div>
 
           {/* ================= PROJECT 1 ================= */}

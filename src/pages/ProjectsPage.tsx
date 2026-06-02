@@ -5,7 +5,6 @@ export default function ProjectsPage() {
     <PageWrapper>
       <div className="max-w-6xl mx-auto px-6 py-20">
 
-        {/* Header */}
         <div className="mb-14">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Projects & Case Studies
@@ -13,82 +12,82 @@ export default function ProjectsPage() {
           <div className="w-24 h-1 bg-blue-600"></div>
         </div>
 
-        <div className="space-y-20">
+        <div className="space-y-16">
 
-{/* ================= FEATURED PROJECT ================= */}
+          {/* FEATURED PROJECT */}
 
-<div className="border-2 border-blue-500 rounded-xl p-10 shadow-md bg-white">
+          <div className="border-2 border-blue-500 rounded-xl p-10 shadow-md bg-white">
 
-  <div className="flex items-center gap-3 mb-4">
-    <span className="px-3 py-1 bg-blue-600 text-white rounded-full text-sm font-semibold">
-      Featured Project
-    </span>
-  </div>
+            <div className="mb-4">
+              <span className="px-3 py-1 bg-blue-600 text-white rounded-full text-sm font-semibold">
+                Featured Project
+              </span>
+            </div>
 
-  <h2 className="text-3xl font-bold mb-2">
-    Retail Inventory Intelligence Solution
-  </h2>
+            <h2 className="text-3xl font-bold mb-2">
+              Retail Inventory Intelligence Solution
+            </h2>
 
-  <p className="text-sm text-gray-500 mb-8">
-    Power BI · DAX · Power Query · Inventory Analytics · Business Intelligence
-  </p>
+            <p className="text-sm text-gray-500 mb-8">
+              Power BI • DAX • Power Query • Inventory Analytics • Business Intelligence
+            </p>
 
-  <Section
-    title="Business Context"
-    content="Retail inventory teams often struggle with stock visibility, replenishment planning, inventory risk identification, stock availability monitoring, and executive decision-making. This project was designed to transform raw inventory data into actionable business intelligence."
-  />
+            <Section
+              title="Business Context"
+              content="Retail inventory teams often struggle with stock visibility, replenishment planning, inventory risk identification, stock availability monitoring, and executive decision-making."
+            />
 
-  <Section
-    title="Project Objective"
-    content="Develop an end-to-end Inventory Intelligence Solution capable of monitoring inventory health, identifying risks, analyzing products, supporting replenishment decisions, and delivering executive-level business recommendations."
-  />
+            <Section
+              title="Project Objective"
+              content="Develop an end-to-end Inventory Intelligence Solution capable of monitoring inventory health, identifying risks, analyzing products, supporting replenishment decisions, and delivering executive-level business recommendations."
+            />
 
-  <Section
-    title="Solution Developed"
-    list={[
-      "Executive Inventory Overview Dashboard",
-      "Inventory Risk & Replenishment Dashboard",
-      "Product Intelligence Drill-through Center",
-      "Executive Recommendations & Business Insights Dashboard"
-    ]}
-  />
+            <Section
+              title="Solution Developed"
+              list={[
+                "Executive Inventory Overview Dashboard",
+                "Inventory Risk & Replenishment Dashboard",
+                "Product Intelligence Drill-through Center",
+                "Executive Recommendations Dashboard",
+              ]}
+            />
 
-  <Section
-    title="Key Insights Identified"
-    list={[
-      "1,670 Products Analyzed",
-      "14 Categories Monitored",
-      "453 Out-of-Stock Products Identified",
-      "546 Low-Stock Products Monitored",
-      "₹7.20 Lakhs Inventory Risk Exposure",
-      "87.86% Inventory Availability"
-    ]}
-  />
+            <Section
+              title="Key Insights Identified"
+              list={[
+                "1,670 Products Analyzed",
+                "14 Categories Monitored",
+                "453 Out-of-Stock Products Identified",
+                "546 Low-Stock Products Monitored",
+                "₹7.20 Lakhs Inventory Risk Exposure",
+                "87.86% Inventory Availability",
+              ]}
+            />
 
-  <Section
-    title="Business Impact"
-    list={[
-      "Improved inventory visibility across all product categories",
-      "Enabled proactive replenishment planning",
-      "Reduced stock-out identification effort",
-      "Provided executive-level decision support",
-      "Centralized inventory monitoring framework",
-      "Highlighted inventory risk exposure and critical products"
-    ]}
-    highlight
-  />
+            <Section
+              title="Business Impact"
+              list={[
+                "Improved inventory visibility",
+                "Enabled proactive replenishment planning",
+                "Reduced stock-out identification effort",
+                "Provided executive-level decision support",
+                "Centralized inventory monitoring framework",
+              ]}
+              highlight
+            />
 
-  <div className="mt-8">
-    <h3 className="text-xl font-semibold mb-4">Project Links</h3>
+            <div className="mt-8">
+              <h3 className="font-semibold text-gray-900 mb-4">
+                Project Links
+              </h3>
 
-```
-<div className="flex flex-wrap gap-4">
+             <div className="flex flex-wrap gap-4">
 
   <a
     href="https://github.com/SakthiSivakumar-io/zepto-retail-inventory-intelligence-dashboard"
     target="_blank"
     rel="noopener noreferrer"
-    className="px-5 py-2 bg-black text-white rounded-lg hover:opacity-90"
+    className="px-5 py-2 bg-black text-white rounded-lg"
   >
     GitHub Repository
   </a>
@@ -103,193 +102,187 @@ export default function ProjectsPage() {
   </a>
 
 </div>
-```
+            </div>
 
-  </div>
+            <Tools
+              tools={[
+                "Power BI",
+                "DAX",
+                "Power Query",
+                "Excel",
+                "Inventory Analytics",
+                "Business Intelligence",
+              ]}
+            />
 
-<Tools
-tools={[
-"Power BI",
-"DAX",
-"Power Query",
-"Excel",
-"Inventory Analytics",
-"Business Intelligence",
-"Data Visualization",
-"Supply Chain Analytics"
-]}
-/>
-
-</div>
+          </div>
 
           {/* ================= PROJECT 1 ================= */}
-          <div className="border border-gray-200 rounded-xl p-10 shadow-sm bg-white hover:shadow-md transition">
+  <div className="border border-gray-200 rounded-xl p-10 shadow-sm bg-white hover:shadow-md transition">
 
-            <h2 className="text-2xl font-bold mb-2">
-              Inventory Variance Control – Heat Treatment Stage
-            </h2>
-            <p className="text-sm text-gray-500 mb-8">
-              Manufacturing Environment · SAP MM · Inventory Governance
-            </p>
+    <h2 className="text-2xl font-bold mb-2">
+      Inventory Variance Control – Heat Treatment Stage
+    </h2>
+    <p className="text-sm text-gray-500 mb-8">
+      Manufacturing Environment · SAP MM · Inventory Governance
+    </p>
 
-            <Section
-              title="Business Context"
-              content="Recurring stock mismatches were observed during physical verification, particularly at the Heat Treatment (HT) stage, impacting inventory accuracy and audit confidence."
-            />
+    <Section
+      title="Business Context"
+      content="Recurring stock mismatches were observed during physical verification, particularly at the Heat Treatment (HT) stage, impacting inventory accuracy and audit confidence."
+    />
 
-            <Section
-              title="Core Problem"
-              content="SAP indicated sufficient stock, yet physical shortages existed. Removal of SAP 311 movement eliminated receipt-level accountability."
-            />
+    <Section
+      title="Core Problem"
+      content="SAP indicated sufficient stock, yet physical shortages existed. Removal of SAP 311 movement eliminated receipt-level accountability."
+    />
 
-            <Section
-              title="My Role"
-              content="Led variance investigation, analyzed SAP movement data, and developed a Power BI dashboard to isolate stage-wise discrepancies."
-            />
+    <Section
+      title="My Role"
+      content="Led variance investigation, analyzed SAP movement data, and developed a Power BI dashboard to isolate stage-wise discrepancies."
+    />
 
-            <Section
-              title="Key Findings"
-              list={[
-                "42 materials impacted",
-                "–1161 Qty variance identified",
-                "100% variance traced to HT stage",
-                "Root cause: removal of movement-based control"
-              ]}
-            />
+    <Section
+      title="Key Findings"
+      list={[
+        "42 materials impacted",
+        "–1161 Qty variance identified",
+        "100% variance traced to HT stage",
+        "Root cause: removal of movement-based control"
+      ]}
+    />
 
-            <Section
-              title="Business Impact"
-              list={[
-                "Restored system-level accountability",
-                "Prevented undetected inventory leakage",
-                "Strengthened audit readiness",
-                "Improved inventory governance discipline"
-              ]}
-              highlight
-            />
+    <Section
+      title="Business Impact"
+      list={[
+        "Restored system-level accountability",
+        "Prevented undetected inventory leakage",
+        "Strengthened audit readiness",
+        "Improved inventory governance discipline"
+      ]}
+      highlight
+    />
 
-            <Tools
-              tools={["SAP MM", "Power BI", "Excel", "Physical Stock Verification"]}
-            />
-          </div>
-
-
-          {/* ================= PROJECT 2 ================= */}
-          <div className="border border-gray-200 rounded-xl p-10 shadow-sm bg-white hover:shadow-md transition">
-
-            <h2 className="text-2xl font-bold mb-2">
-              Weighing Scale Accuracy & Inventory Conversion Optimization
-            </h2>
-            <p className="text-sm text-gray-500 mb-8">
-              Process Study · Inventory Accuracy · Metrological Analysis
-            </p>
-
-            <Section
-              title="Business Context"
-              content="Minor but recurring stock discrepancies were observed during weight-to-piece conversion of lightweight components."
-            />
-
-            <Section
-              title="Core Problem"
-              content="Despite calibration compliance, scale resolution below 2kg load caused systematic rounding errors and quantity mismatches."
-            />
-
-            <Section
-              title="My Role"
-              content="Conducted controlled experimental trials, analyzed sampling logic, and validated metrological behavior across weight ranges."
-            />
-
-            <Section
-              title="Key Findings"
-              list={[
-                "Scale accuracy stabilizes above 2kg load",
-                "Below threshold → rounding variation increases",
-                "Discrepancies were systemic, not operator-driven"
-              ]}
-            />
-
-            <Section
-              title="Business Impact"
-              list={[
-                "Reduced inventory conversion variance",
-                "Scientifically justified audit discrepancies",
-                "Improved operational accuracy",
-                "Lowered reconciliation effort"
-              ]}
-              highlight
-            />
-
-            <Tools
-              tools={["Excel", "Statistical Analysis", "Process Validation"]}
-            />
-          </div>
+    <Tools
+      tools={["SAP MM", "Power BI", "Excel", "Physical Stock Verification"]}
+    />
+  </div>
 
 
-          {/* ================= PROJECT 3 ================= */}
-          <div className="border border-gray-200 rounded-xl p-10 shadow-sm bg-white hover:shadow-md transition">
+  {/* ================= PROJECT 2 ================= */}
+  <div className="border border-gray-200 rounded-xl p-10 shadow-sm bg-white hover:shadow-md transition">
 
-            <h2 className="text-2xl font-bold mb-2">
-              SAP MM Inventory Flow Analysis (GRN → Consumption → Reconciliation)
-            </h2>
-            <p className="text-sm text-gray-500 mb-8">
-              SAP MM · Inventory Flow Visibility · Financial Impact Analysis
-            </p>
+    <h2 className="text-2xl font-bold mb-2">
+      Weighing Scale Accuracy & Inventory Conversion Optimization
+    </h2>
+    <p className="text-sm text-gray-500 mb-8">
+      Process Study · Inventory Accuracy · Metrological Analysis
+    </p>
 
-            <Section
-              title="Business Context"
-              content="Limited visibility existed between Goods Receipt (GRN), production consumption, and reconciliation processes."
-            />
+    <Section
+      title="Business Context"
+      content="Minor but recurring stock discrepancies were observed during weight-to-piece conversion of lightweight components."
+    />
 
-            <Section
-              title="Core Problem"
-              content="Material-level discrepancies impacted inventory accuracy, financial reporting, and audit reconciliation timelines."
-            />
+    <Section
+      title="Core Problem"
+      content="Despite calibration compliance, scale resolution below 2kg load caused systematic rounding errors and quantity mismatches."
+    />
 
-            <Section
-              title="My Role"
-              content="Modeled SAP MM transactional data and developed a Power BI MIS dashboard to track movement trends and variance patterns."
-            />
+    <Section
+      title="My Role"
+      content="Conducted controlled experimental trials, analyzed sampling logic, and validated metrological behavior across weight ranges."
+    />
 
-            <Section
-              title="Key Findings"
-              list={[
-                "GRN vs consumption trend gaps identified",
-                "Material-level discrepancy mapping",
-                "Quantity & value-based variance visibility",
-                "Plant and storage-location filtering logic applied"
-              ]}
-            />
+    <Section
+      title="Key Findings"
+      list={[
+        "Scale accuracy stabilizes above 2kg load",
+        "Below threshold → rounding variation increases",
+        "Discrepancies were systemic, not operator-driven"
+      ]}
+    />
 
-            <Section
-              title="Business Impact"
-              list={[
-                "Improved inventory movement visibility",
-                "Enabled faster discrepancy detection",
-                "Supported structured audit reconciliation",
-                "Strengthened reporting reliability"
-              ]}
-              highlight
-            />
+    <Section
+      title="Business Impact"
+      list={[
+        "Reduced inventory conversion variance",
+        "Scientifically justified audit discrepancies",
+        "Improved operational accuracy",
+        "Lowered reconciliation effort"
+      ]}
+      highlight
+    />
 
-            <Tools
-              tools={["SAP MM", "Power BI", "Advanced Excel", "MIS Reporting"]}
-            />
-          </div>
+    <Tools
+      tools={["Excel", "Statistical Analysis", "Process Validation"]}
+    />
+  </div>
 
-        </div>
+
+  {/* ================= PROJECT 3 ================= */}
+  <div className="border border-gray-200 rounded-xl p-10 shadow-sm bg-white hover:shadow-md transition">
+
+    <h2 className="text-2xl font-bold mb-2">
+      SAP MM Inventory Flow Analysis (GRN → Consumption → Reconciliation)
+    </h2>
+    <p className="text-sm text-gray-500 mb-8">
+      SAP MM · Inventory Flow Visibility · Financial Impact Analysis
+    </p>
+
+    <Section
+      title="Business Context"
+      content="Limited visibility existed between Goods Receipt (GRN), production consumption, and reconciliation processes."
+    />
+
+    <Section
+      title="Core Problem"
+      content="Material-level discrepancies impacted inventory accuracy, financial reporting, and audit reconciliation timelines."
+    />
+
+    <Section
+      title="My Role"
+      content="Modeled SAP MM transactional data and developed a Power BI MIS dashboard to track movement trends and variance patterns."
+    />
+
+    <Section
+      title="Key Findings"
+      list={[
+        "GRN vs consumption trend gaps identified",
+        "Material-level discrepancy mapping",
+        "Quantity & value-based variance visibility",
+        "Plant and storage-location filtering logic applied"
+      ]}
+    />
+
+    <Section
+      title="Business Impact"
+      list={[
+        "Improved inventory movement visibility",
+        "Enabled faster discrepancy detection",
+        "Supported structured audit reconciliation",
+        "Strengthened reporting reliability"
+      ]}
+      highlight
+    />
+
+    <Tools
+      tools={["SAP MM", "Power BI", "Advanced Excel", "MIS Reporting"]}
+    />
+  </div>
+
+</div>
       </div>
     </PageWrapper>
   );
 }
-
-
 /* ================= Reusable Components ================= */
 
 function Section({
   title,
   content,
   list,
-  highlight
+  highlight,
 }: {
   title: string;
   content?: string;
@@ -298,14 +291,24 @@ function Section({
 }) {
   return (
     <div className="mb-6">
-      <h3 className="font-semibold text-gray-900 mb-2">{title}</h3>
+      <h3 className="font-semibold text-gray-900 mb-2">
+        {title}
+      </h3>
 
       {content && (
-        <p className="text-gray-600">{content}</p>
+        <p className="text-gray-600">
+          {content}
+        </p>
       )}
 
       {list && (
-        <ul className={`list-disc list-inside space-y-1 ${highlight ? "text-gray-800 font-medium" : "text-gray-600"}`}>
+        <ul
+          className={`list-disc list-inside space-y-1 ${
+            highlight
+              ? "text-gray-800 font-medium"
+              : "text-gray-600"
+          }`}
+        >
           {list.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
@@ -315,10 +318,17 @@ function Section({
   );
 }
 
-function Tools({ tools }: { tools: string[] }) {
+function Tools({
+  tools,
+}: {
+  tools: string[];
+}) {
   return (
     <div className="mt-4">
-      <h3 className="font-semibold text-gray-900 mb-2">Tools Used</h3>
+      <h3 className="font-semibold text-gray-900 mb-2">
+        Tools Used
+      </h3>
+
       <div className="flex flex-wrap gap-2">
         {tools.map((tool) => (
           <span

@@ -15,6 +15,79 @@ export default function ProjectsPage() {
 
         <div className="space-y-20">
 
+{/* ================= FEATURED PROJECT ================= */}
+<div className="border-2 border-blue-500 rounded-xl p-10 shadow-md bg-white">
+
+  <div className="flex items-center gap-3 mb-4">
+    <span className="px-3 py-1 bg-blue-600 text-white rounded-full text-sm font-semibold">
+      Featured Project
+    </span>
+  </div>
+
+  <h2 className="text-3xl font-bold mb-2">
+    Retail Inventory Intelligence Solution
+  </h2>
+
+  <p className="text-sm text-gray-500 mb-8">
+    Power BI · DAX · Power Query · Inventory Analytics · Business Intelligence
+  </p>
+
+  <Section
+    title="Business Context"
+    content="Retail inventory teams often struggle with stock visibility, replenishment planning, inventory risk identification, and executive decision-making."
+  />
+
+  <Section
+    title="Project Objective"
+    content="Develop an end-to-end Inventory Intelligence Solution capable of monitoring inventory health, identifying risks, analyzing products, and providing executive-level business recommendations."
+  />
+
+  <Section
+    title="Solution Developed"
+    list={[
+      "Executive Inventory Overview Dashboard",
+      "Inventory Risk & Replenishment Dashboard",
+      "Product Intelligence Drill-through Center",
+      "Executive Recommendations & Business Insights Dashboard"
+    ]}
+  />
+
+  <Section
+    title="Key Insights Identified"
+    list={[
+      "1670 Products Analyzed",
+      "14 Categories Monitored",
+      "453 Out-of-Stock Products Identified",
+      "546 Low Stock Products Monitored",
+      "₹7.20 Lakhs Inventory Risk Exposure",
+      "87.86% Inventory Availability"
+    ]}
+  />
+
+  <Section
+    title="Business Impact"
+    list={[
+      "Improved inventory visibility",
+      "Enabled proactive replenishment planning",
+      "Reduced stock-out identification effort",
+      "Provided executive-level decision support",
+      "Centralized inventory monitoring framework"
+    ]}
+    highlight
+  />
+
+  <Tools
+    tools={[
+      "Power BI",
+      "DAX",
+      "Power Query",
+      "Excel",
+      "Inventory Analytics",
+      "Business Intelligence"
+    ]}
+  />
+</div>
+
           {/* ================= PROJECT 1 ================= */}
           <div className="border border-gray-200 rounded-xl p-10 shadow-sm bg-white hover:shadow-md transition">
 

@@ -19,7 +19,7 @@ export default function ResumePage() {
           className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold
                      transition-all duration-300 hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-lg"
         >
-          Download PDF Resume
+          Download Latest Resume
         </a>
       </div>
     </PageWrapper>

@@ -5,99 +5,150 @@ export default function AboutPage() {
     <PageWrapper>
       <div className="max-w-6xl mx-auto px-6 py-24">
 
-        {/* Header Section */}
+        {/* Header */}
         <div className="mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            About Me
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl">
-            Inventory Control Specialist focused on SAP-driven governance,
-            variance reduction, and data-backed operational decision-making.
+          <p className="text-blue-600 font-semibold uppercase tracking-wider mb-3">
+            Professional Profile
           </p>
-          <div className="w-24 h-1 bg-blue-600 mt-6"></div>
+
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+            Bridging Inventory Operations,
+            SAP MM, and Business Analytics
+          </h1>
+
+          <p className="text-xl text-gray-600 max-w-4xl leading-relaxed">
+            Inventory Analyst with 3.5+ years of experience improving inventory
+            accuracy, audit readiness, and operational control through SAP MM,
+            inventory analytics, and data-driven decision making.
+          </p>
         </div>
 
-        {/* KPI STRIP */}
+        {/* KPI SECTION */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
-          {[
-            { value: "3.5+", label: "Years Experience" },
-            { value: "SAP MM", label: "Core System Expertise" },
-            { value: "Audit-Ready", label: "Control Orientation" },
-            { value: "Data-Driven", label: "Decision Approach" }
-          ].map((item) => (
-            <div
-              key={item.label}
-              className="bg-gray-50 border border-gray-200 rounded-lg p-6 text-center"
-            >
-              <p className="text-2xl font-bold text-gray-900">
-                {item.value}
-              </p>
-              <p className="text-sm text-gray-500 mt-1">
-                {item.label}
+
+          <div className="bg-white border rounded-xl p-6 text-center shadow-sm">
+            <h3 className="text-3xl font-bold text-blue-600">3.5+</h3>
+            <p className="text-gray-500 mt-2 text-sm">
+              Years Experience
+            </p>
+          </div>
+
+          <div className="bg-white border rounded-xl p-6 text-center shadow-sm">
+            <h3 className="text-3xl font-bold text-blue-600">10,000+</h3>
+            <p className="text-gray-500 mt-2 text-sm">
+              Materials Managed
+            </p>
+          </div>
+
+          <div className="bg-white border rounded-xl p-6 text-center shadow-sm">
+            <h3 className="text-3xl font-bold text-blue-600">₹16 Cr</h3>
+            <p className="text-gray-500 mt-2 text-sm">
+              Inventory Audited
+            </p>
+          </div>
+
+          <div className="bg-white border rounded-xl p-6 text-center shadow-sm">
+            <h3 className="text-3xl font-bold text-blue-600">80%</h3>
+            <p className="text-gray-500 mt-2 text-sm">
+              Inventory Accuracy Improvement
+            </p>
+          </div>
+
+        </div>
+
+        {/* ABOUT STORY */}
+        <div className="max-w-5xl space-y-8 text-lg text-gray-700 leading-relaxed mb-20">
+
+          <p>
+            I specialize in inventory governance, SAP MM operations,
+            inventory reconciliation, audit support, and operational
+            reporting within manufacturing environments.
+          </p>
+
+          <p>
+            Throughout my career, I have managed inventory operations
+            involving <span className="font-semibold text-gray-900">
+            10,000+ materials</span>, supported audit activities covering
+            approximately <span className="font-semibold text-gray-900">
+            ₹16 Crore worth of inventory</span>, and led investigations into
+            stock discrepancies, process failures, and inventory control gaps.
+          </p>
+
+          <p>
+            My work extends beyond routine inventory transactions.
+            I focus on identifying root causes behind operational issues,
+            strengthening internal controls, improving inventory visibility,
+            and ensuring that physical stock aligns with system records.
+          </p>
+
+          <p>
+            By combining SAP MM expertise with analytical thinking,
+            I help transform operational data into actionable business insights,
+            enabling better decision-making and reducing inventory-related risks.
+          </p>
+
+          <p>
+            As I continue evolving toward analytics-focused roles,
+            I am expanding my capabilities in Power BI, reporting automation,
+            SQL, and business analytics to bridge the gap between operations,
+            systems, and data.
+          </p>
+
+        </div>
+
+        {/* VALUE PROPOSITION */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-gray-900 mb-10">
+            What I Bring
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+
+            <div className="bg-white border rounded-xl p-8 shadow-sm">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Inventory Governance
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Ensuring inventory accuracy through reconciliation,
+                variance analysis, cycle counting, and inventory control
+                frameworks.
               </p>
             </div>
-          ))}
-        </div>
 
-        {/* Professional Narrative */}
-        <div className="max-w-4xl space-y-8 text-lg text-gray-700 leading-relaxed mb-20">
-          <p>
-            I am a <span className="font-semibold text-gray-900">results-oriented Inventory Analyst</span> with hands-on
-            experience in manufacturing environments where precision,
-            accountability, and system discipline are critical.
-          </p>
+            <div className="bg-white border rounded-xl p-8 shadow-sm">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                SAP MM Expertise
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Managing GRN, consumption, stock transfers,
+                material movements, reconciliation processes,
+                and inventory visibility through SAP MM.
+              </p>
+            </div>
 
-          <p>
-            My work centers around <span className="font-semibold text-gray-900">inventory reconciliation,
-            SAP MM process control, and variance investigation</span> —
-            ensuring that system stock aligns with physical reality and that
-            discrepancies are analyzed at root-cause level.
-          </p>
+            <div className="bg-white border rounded-xl p-8 shadow-sm">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Audit & Compliance
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Supporting inventory audits, documentation reviews,
+                control validation, and corrective action tracking
+                to improve governance.
+              </p>
+            </div>
 
-          <p>
-            I operate at the intersection of <span className="font-semibold text-gray-900">operations,
-            financial impact, and system integrity</span>, transforming raw
-            transactional data into actionable insights that strengthen
-            governance and reduce risk exposure.
-          </p>
+            <div className="bg-white border rounded-xl p-8 shadow-sm">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Business Analytics
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Leveraging Power BI, Excel, and reporting tools
+                to convert operational data into actionable insights
+                for management decision-making.
+              </p>
+            </div>
 
-          <p>
-            As I continue advancing toward analytics-driven roles, I am
-            integrating <span className="font-semibold text-gray-900">Advanced Excel,
-            reporting automation, and business intelligence tools</span> into
-            my workflow to deliver scalable, data-backed solutions.
-          </p>
-        </div>
-
-        {/* Capability Sections */}
-        <div className="grid md:grid-cols-2 gap-10">
-
-          <div className="bg-white border border-gray-200 rounded-xl p-10 shadow-sm">
-            <h3 className="text-xl font-semibold text-gray-900 mb-6">
-              Core Capabilities
-            </h3>
-            <ul className="space-y-4 text-gray-600">
-              <li>Inventory Control & Stock Reconciliation</li>
-              <li>SAP MM – GRN, Consumption & Movement Analysis</li>
-              <li>Variance & Root Cause Investigation</li>
-              <li>Internal Audit Documentation & Compliance Support</li>
-              <li>Physical vs System Stock Validation</li>
-            </ul>
           </div>
-
-          <div className="bg-white border border-gray-200 rounded-xl p-10 shadow-sm">
-            <h3 className="text-xl font-semibold text-gray-900 mb-6">
-              Strategic Growth Focus
-            </h3>
-            <ul className="space-y-4 text-gray-600">
-              <li>Advanced Excel & Reporting Automation</li>
-              <li>Power BI Dashboard Development</li>
-              <li>Data-Driven Process Optimization</li>
-              <li>Inventory Governance Strengthening</li>
-              <li>Control-Based Risk Reduction</li>
-            </ul>
-          </div>
-
         </div>
 
       </div>

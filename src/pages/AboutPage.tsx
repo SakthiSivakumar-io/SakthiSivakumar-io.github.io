@@ -1,4 +1,11 @@
 import { motion } from "framer-motion";
+import {
+  BriefcaseBusiness,
+  Database,
+  ShieldCheck,
+  ChartNoAxesCombined,
+  Waypoints,
+} from "lucide-react";
 import PageWrapper from "../components/PageWrapper";
 
 export default function AboutPage() {
@@ -6,27 +13,27 @@ export default function AboutPage() {
     {
       title: "OPERATIONS",
       text: "Understanding business & process",
-      icon: "◈",
+      icon: "BriefcaseBusiness",
     },
     {
       title: "SAP MM",
-      text: "Managing data in real-time",
-      icon: "▣",
+      text: "ERP-driven material flow",
+      icon: "Database",
     },
     {
       title: "INVENTORY CONTROL",
-      text: "Ensuring accuracy & compliance",
-      icon: "◉",
+      text: "Accuracy, audit & compliance",
+      icon: "ShieldCheck",
     },
     {
       title: "DATA ANALYSIS",
-      text: "Extracting meaningful insights",
-      icon: "◌",
+      text: "Turning data into insights",
+      icon: "ChartNoAxesCombined",
     },
     {
       title: "BUSINESS DECISION",
       text: "Driving measurable impact",
-      icon: "↗",
+      icon: "Waypoints",
     },
   ];
 
@@ -140,9 +147,42 @@ export default function AboutPage() {
                     <div className="absolute inset-3 rounded-full border border-blue-400/20" />
                     <div className="absolute inset-7 rounded-full border border-blue-400/10" />
 
-                    <div className="flex h-28 w-28 items-center justify-center rounded-full border border-blue-400/30 bg-gradient-to-br from-blue-500/20 to-slate-900 text-4xl font-bold text-blue-300 shadow-[0_0_50px_rgba(59,130,246,0.15)]">
-                      SS
-                    </div>
+                    <div className="relative flex h-40 w-40 items-center justify-center rounded-full border border-blue-400/30 bg-[#020817] shadow-[0_0_55px_rgba(37,99,235,0.22)] md:h-44 md:w-44">
+
+  <div className="absolute -inset-5 rounded-full border border-blue-400/10" />
+  <div className="absolute -inset-3 rounded-full border border-blue-400/20" />
+
+  <motion.div
+    animate={{ rotate: 360 }}
+    transition={{
+      duration: 18,
+      repeat: Infinity,
+      ease: "linear",
+    }}
+    className="absolute -inset-6 rounded-full border border-transparent border-t-blue-400/70 border-r-blue-400/20"
+  >
+    <span className="absolute -top-1 left-1/2 h-2 w-2 -translate-x-1/2 rounded-full bg-blue-400 shadow-[0_0_14px_rgba(96,165,250,0.9)]" />
+  </motion.div>
+
+  <motion.div
+    animate={{ rotate: -360 }}
+    transition={{
+      duration: 24,
+      repeat: Infinity,
+      ease: "linear",
+    }}
+    className="absolute -inset-9 rounded-full border border-transparent border-b-blue-400/30 border-l-blue-400/10"
+  >
+    <span className="absolute bottom-1 left-1/2 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-blue-300 shadow-[0_0_10px_rgba(96,165,250,0.7)]" />
+  </motion.div>
+
+  <img
+    src="/My_Image.jpg"
+    alt="Sakthi Sivakumar"
+    className="relative z-10 h-full w-full rounded-full object-cover object-center"
+  />
+
+</div>
 
                     <span className="absolute right-1 top-10 h-2 w-2 rounded-full bg-blue-400 shadow-[0_0_12px_rgba(96,165,250,0.9)]" />
                     <span className="absolute bottom-6 left-4 h-1.5 w-1.5 rounded-full bg-blue-400" />
@@ -186,8 +226,21 @@ export default function AboutPage() {
                 <div className="space-y-7">
                   {careerDNA.map((item, index) => (
                     <div key={item.title} className="relative flex gap-4">
-                      <div className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-blue-400/30 bg-[#071426] text-xs text-blue-300">
-                        {item.icon}
+                      <div className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-blue-400/30 bg-[#071426] text-blue-300 shadow-[0_0_18px_rgba(59,130,246,0.08)] transition-all duration-300 hover:border-blue-400/60 hover:bg-blue-500/10 hover:shadow-[0_0_24px_rgba(59,130,246,0.16)]">
+                        {(() => {
+                          const Icon =
+                            item.icon === "BriefcaseBusiness"
+                              ? BriefcaseBusiness
+                              : item.icon === "Database"
+                                ? Database
+                                : item.icon === "ShieldCheck"
+                                  ? ShieldCheck
+                                  : item.icon === "ChartNoAxesCombined"
+                                    ? ChartNoAxesCombined
+                                    : Waypoints;
+
+                          return <Icon className="h-4 w-4" strokeWidth={1.8} />;
+                        })()}
                       </div>
 
                       <div className="pt-0.5">
@@ -242,7 +295,7 @@ export default function AboutPage() {
               </p>
 
               <h2 className="text-3xl font-bold text-white md:text-4xl">
-                Operations expertise backed by{" "}
+                Operations experience backed by{" "}
                 <span className="text-blue-400">analytics.</span>
               </h2>
             </div>

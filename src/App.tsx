@@ -1,4 +1,3 @@
-import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
 import HomePage from "./pages/HomePage";
@@ -16,17 +15,29 @@ export default function App() {
   const [currentPage, setCurrentPage] = useState("home");
 
   return (
-    <div className="min-h-screen bg-white">
-      <Navigation currentPage={currentPage} setCurrentPage={setCurrentPage} />
+    <div className="min-h-screen bg-[#020817] text-slate-100">
+      <Navigation
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+      />
 
       <main className="min-h-screen">
-        {currentPage === "home" && <HomePage setCurrentPage={setCurrentPage} />}
+        {currentPage === "home" && (
+          <HomePage setCurrentPage={setCurrentPage} />
+        )}
+
         {currentPage === "about" && <AboutPage />}
+
         {currentPage === "skills" && <SkillsPage />}
+
         {currentPage === "projects" && <ProjectsPage />}
+
         {currentPage === "experience" && <ExperiencePage />}
+
         {currentPage === "resume" && <ResumePage />}
+
         {currentPage === "contact" && <ContactPage />}
+
         {currentPage === "admin" && <AdminPage />}
       </main>
 
@@ -56,60 +67,122 @@ function Navigation({
     { id: "contact", label: "Contact" },
   ];
 
+  const handleNavigation = (page: string) => {
+    setCurrentPage(page);
+    setOpen(false);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <nav className="bg-white border-b sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-4 h-16 flex justify-between items-center">
-        <div
-          className="text-xl font-bold text-blue-600 cursor-pointer"
-          onClick={() => {
-            setCurrentPage("home");
-            setOpen(false);
-          }}
-        >
-          Sakthi Sivakumar
-        </div>
+    <nav className="sticky top-0 z-50 border-b border-blue-400/10 bg-[#020817]/90 backdrop-blur-xl">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 h-[76px] flex items-center justify-between">
 
-        {/* Desktop */}
-        <div className="hidden md:flex space-x-8">
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => setCurrentPage(item.id)}
-              className={`text-sm font-medium ${
-                currentPage === item.id
-                  ? "text-blue-600 border-b-2 border-blue-600"
-                  : "text-gray-600 hover:text-blue-600"
-              }`}
-            >
-              {item.label}
-            </button>
-          ))}
-        </div>
+        {/* BRAND */}
 
-        {/* Mobile */}
         <button
-          className="md:hidden text-2xl"
-          onClick={() => setOpen(!open)}
+          onClick={() => handleNavigation("home")}
+          className="group flex items-center gap-2"
+          aria-label="Go to homepage"
         >
-          ☰
+          <span className="text-2xl font-black tracking-tight text-white">
+            SAKTHI
+          </span>
+
+          <span className="text-2xl font-black text-blue-500 transition-transform duration-300 group-hover:translate-x-1">
+            .
+          </span>
+        </button>
+
+        {/* DESKTOP NAVIGATION */}
+
+        <div className="hidden md:flex items-center gap-7">
+          {navItems.map((item) => {
+            const isActive = currentPage === item.id;
+
+            return (
+              <button
+                key={item.id}
+                onClick={() => handleNavigation(item.id)}
+                className={`relative py-2 text-sm font-medium transition-colors duration-300 ${
+                  isActive
+                    ? "text-white"
+                    : "text-slate-400 hover:text-white"
+                }`}
+              >
+                {item.label}
+
+                {/* Active indicator */}
+
+                <span
+                  className={`absolute left-0 right-0 -bottom-1 h-[2px] rounded-full bg-blue-500 transition-all duration-300 ${
+                    isActive
+                      ? "scale-x-100 opacity-100"
+                      : "scale-x-0 opacity-0"
+                  }`}
+                />
+              </button>
+            );
+          })}
+        </div>
+
+        {/* DESKTOP CTA */}
+
+        <button
+          onClick={() => handleNavigation("contact")}
+          className="hidden lg:inline-flex items-center gap-2 rounded-lg border border-blue-400/30 bg-blue-500/10 px-5 py-2.5 text-sm font-semibold text-blue-300 transition-all duration-300 hover:border-blue-400/60 hover:bg-blue-500/20 hover:text-white hover:shadow-[0_0_25px_rgba(59,130,246,0.18)]"
+        >
+          Let&apos;s Connect
+          <span className="text-blue-400 transition-transform duration-300 group-hover:translate-x-1">
+            ?
+          </span>
+        </button>
+
+        {/* MOBILE MENU BUTTON */}
+
+        <button
+          className="md:hidden flex h-10 w-10 items-center justify-center rounded-lg border border-blue-400/20 bg-blue-500/5 text-slate-200 transition-colors hover:bg-blue-500/10"
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={open}
+        >
+          <span className="text-xl">
+            {open ? "�" : "?"}
+          </span>
         </button>
       </div>
 
+      {/* MOBILE NAVIGATION */}
+
       {open && (
-        <div className="md:hidden border-t bg-white">
-          <div className="flex flex-col px-4 py-3 space-y-3">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => {
-                  setCurrentPage(item.id);
-                  setOpen(false);
-                }}
-                className="text-left text-sm text-gray-700"
-              >
-                {item.label}
-              </button>
-            ))}
+        <div className="md:hidden border-t border-blue-400/10 bg-[#020817]/98 backdrop-blur-xl">
+          <div className="px-6 py-5 space-y-1">
+            {navItems.map((item) => {
+              const isActive = currentPage === item.id;
+
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => handleNavigation(item.id)}
+                  className={`w-full rounded-lg px-4 py-3 text-left text-sm font-medium transition-all duration-300 ${
+                    isActive
+                      ? "bg-blue-500/10 text-blue-300"
+                      : "text-slate-400 hover:bg-white/5 hover:text-white"
+                  }`}
+                >
+                  {item.label}
+                </button>
+              );
+            })}
+
+            <button
+              onClick={() => handleNavigation("contact")}
+              className="mt-4 w-full rounded-lg border border-blue-400/30 bg-blue-500/10 px-4 py-3 text-left text-sm font-semibold text-blue-300 transition-all hover:bg-blue-500/20 hover:text-white"
+            >
+              Let&apos;s Connect ?
+            </button>
           </div>
         </div>
       )}

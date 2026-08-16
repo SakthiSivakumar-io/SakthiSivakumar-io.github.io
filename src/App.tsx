@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Menu, X, ArrowRight } from "lucide-react";
 
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
@@ -135,9 +136,11 @@ function Navigation({
           className="hidden lg:inline-flex items-center gap-2 rounded-lg border border-blue-400/30 bg-blue-500/10 px-5 py-2.5 text-sm font-semibold text-blue-300 transition-all duration-300 hover:border-blue-400/60 hover:bg-blue-500/20 hover:text-white hover:shadow-[0_0_25px_rgba(59,130,246,0.18)]"
         >
           Let&apos;s Connect
-          <span className="text-blue-400 transition-transform duration-300 group-hover:translate-x-1">
-            ?
-          </span>
+          <ArrowRight
+            size={16}
+            strokeWidth={2}
+            className="text-blue-400 transition-transform duration-300 group-hover:translate-x-1"
+          />
         </button>
 
         {/* MOBILE MENU BUTTON */}
@@ -148,9 +151,19 @@ function Navigation({
           aria-label="Toggle navigation menu"
           aria-expanded={open}
         >
-          <span className="text-xl">
-            {open ? "�" : "?"}
-          </span>
+                    {open ? (
+            <X
+              size={22}
+              strokeWidth={2}
+              aria-hidden="true"
+            />
+          ) : (
+            <Menu
+              size={22}
+              strokeWidth={2}
+              aria-hidden="true"
+            />
+          )}
         </button>
       </div>
 
@@ -181,7 +194,14 @@ function Navigation({
               onClick={() => handleNavigation("contact")}
               className="mt-4 w-full rounded-lg border border-blue-400/30 bg-blue-500/10 px-4 py-3 text-left text-sm font-semibold text-blue-300 transition-all hover:bg-blue-500/20 hover:text-white"
             >
-              Let&apos;s Connect ?
+              <span className="flex items-center justify-between">
+                <span>Let&apos;s Connect</span>
+                <ArrowRight
+                  size={16}
+                  strokeWidth={2}
+                  className="text-blue-400"
+                />
+              </span>
             </button>
           </div>
         </div>

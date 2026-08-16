@@ -1,6 +1,7 @@
-import PageWrapper from "../components/PageWrapper";
+﻿import PageWrapper from "../components/PageWrapper";
 import { motion } from "framer-motion";
 import CountUp from "../components/CountUp";
+import { ArrowRight, Download, BriefcaseBusiness, Database, ShieldCheck, ChartNoAxesCombined, Target } from "lucide-react";
 
 export default function HomePage({
   setCurrentPage,
@@ -69,11 +70,11 @@ export default function HomePage({
               className="mt-6 flex flex-wrap items-center gap-3 text-xs font-medium text-slate-500"
             >
               <span>SAP MM</span>
-              <span className="text-blue-500">•</span>
+              <span className="text-blue-500">â€¢</span>
               <span>Inventory Control</span>
-              <span className="text-blue-500">•</span>
+              <span className="text-blue-500">â€¢</span>
               <span>Business Analytics</span>
-              <span className="text-blue-500">•</span>
+              <span className="text-blue-500">â€¢</span>
               <span>Audit & Governance</span>
             </motion.div>
 
@@ -91,8 +92,7 @@ export default function HomePage({
               >
                 View Case Studies
                 <span className="transition-transform duration-300 group-hover:translate-x-1">
-                  ?
-                </span>
+                  <ArrowRight size={17} strokeWidth={2} aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1" /></span>
               </button>
 
               <button
@@ -100,7 +100,12 @@ export default function HomePage({
                 className="inline-flex items-center gap-2 rounded-lg border border-slate-700 bg-white/[0.02] px-6 py-3.5 text-sm font-semibold text-slate-200 transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-500/40 hover:bg-blue-500/5"
               >
                 Download Resume
-                <span className="text-blue-400">?</span>
+                <Download
+                  size={17}
+                  strokeWidth={2}
+                  aria-hidden="true"
+                  className="text-blue-400"
+                />
               </button>
             </motion.div>
           </div>
@@ -183,7 +188,7 @@ export default function HomePage({
                     Audit Exposure
                   </p>
                   <p className="mt-2 text-2xl font-bold text-white">
-                    ₹16 Cr
+                    â‚¹16 Cr
                   </p>
                   <p className="mt-1 text-xs text-slate-500">
                     Inventory value
@@ -248,7 +253,7 @@ export default function HomePage({
 
             <KPI
               value={16}
-              prefix="₹"
+              prefix="â‚¹"
               suffix=" Cr"
               label="Inventory Audited"
             />
@@ -268,7 +273,7 @@ export default function HomePage({
 
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-blue-400">
-                01 — Profile
+                01 â€” Profile
               </p>
 
               <h2 className="mt-5 text-4xl font-bold tracking-tight text-white sm:text-5xl">
@@ -313,7 +318,7 @@ export default function HomePage({
         <section className="relative mx-auto max-w-7xl px-6 py-20 lg:px-10">
           <div className="mb-12">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-blue-400">
-              02 — Career DNA
+              02 - Career DNA
             </p>
 
             <h2 className="mt-4 text-3xl font-bold text-white sm:text-4xl">
@@ -349,8 +354,7 @@ export default function HomePage({
 
                 {index < 4 && (
                   <p className="mt-3 text-blue-500 md:hidden">
-                    ?
-                  </p>
+                    <ArrowRight size={18} strokeWidth={2} aria-hidden="true" className="mx-auto" /></p>
                 )}
               </motion.div>
             ))}
@@ -366,7 +370,7 @@ export default function HomePage({
 
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.28em] text-blue-400">
-                  03 — Impact
+                  03 â€” Impact
                 </p>
 
                 <h2 className="mt-4 text-3xl font-bold text-white">
@@ -380,7 +384,7 @@ export default function HomePage({
               <div className="grid gap-4 sm:grid-cols-2">
                 {[
                   "Managed inventory operations involving 10,000+ materials",
-                  "Supported audits covering ₹16 Crore inventory value",
+                  "Supported audits covering â‚¹16 Crore inventory value",
                   "Improved inventory accuracy through variance investigations",
                   "Built analytical dashboards for operational reporting",
                   "Identified process control failures impacting stock accuracy",
@@ -443,6 +447,12 @@ function KPI({
     </div>
   );
 }
+
+
+
+
+
+
 
 
 
